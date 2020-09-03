@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<dimen name="textSizeetn">18sp</dimen>
+<dimen name="textsize_eight">8sp</dimen>
+<dimen name="textsize_twoenty">20sp</dimen>
+    <dimen name="twoenty">20dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="fifteen">15dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="textsize_twl">12sp</dimen>
+    <dimen name="textsize_ten">10sp</dimen>
+    <dimen name="textsize_etn">18sp</dimen>
+    <dimen name="textsize_sixteen">16sp</dimen>
+    <dimen name="textsize_twoentytwo">22sp</dimen>
+    <dimen name="thirty">30dp</dimen>
+    <dimen name="textsize_fourteen">14sp</dimen>
+    <dimen name="fifty">50dp</dimen>
+    <dimen name="contactLRmargin">20dp</dimen>
+    <dimen name="cardsize">70dp</dimen>
+    <dimen name="fourty">40dp</dimen>
+    <dimen name="fourtyfive">45dp</dimen>
+    <dimen name="cardsizetab">80dp</dimen>
+
+
+    <dimen name="media_item_radius">4dp</dimen>
+    <dimen name="media_item_half_radius">2dp</dimen>
+    <dimen name="media_item_negative_half_radius">-2dp</dimen>
+
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="hundred">100dp</dimen>
+    <dimen name="buttonsize">50dp</dimen>
+    <dimen name="buttoncornerradius">5dp</dimen>
+    <dimen name="sixty">60dp</dimen>
+    <dimen name="textsize_twoentysix">26sp</dimen>
+    <dimen name="textsize_twoentyeight">28sp</dimen>
+    <dimen name="boxcornerradius">5dp</dimen>
+    <dimen name="edittextheight">50dp</dimen>
+    <dimen name="textviewcurve">5dp</dimen>
+    <dimen name="loginviewcurve">25dp</dimen>
+    <dimen name="recyclercurve">0dp</dimen>
+    <dimen name="textviewsize">50dp</dimen>
+    <dimen name="textsize_otp">40sp</dimen>
+    <dimen name="menuicons">18dp</dimen>
+    <dimen name="textsize_mycartsmall">10sp</dimen>
+    <dimen name="marginstart_mycart">30dp</dimen>
+    <dimen name="three">3dp</dimen>
+    <dimen name="twoentyfive">25dp</dimen>
+    <dimen name="paymentbtnsize">50dp</dimen>
+
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="entermobileno">Enter Mobile Number</string>
+    <string name="mobileno">Mobile Number</string>
+    <string name="forgetpassword">Forget your password?</string>
+    <string name="login">Login</string>
+    <string name="donthaveaccount">Don\'t have an account ?</string>
+    <string name="signup">Sign Up</string>
+    <string name="password">Password</string>
+
+    <string name="verificationcode">Verification Code</string>
+    <string name="otp">OTP</string>
+</resources>
