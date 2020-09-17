@@ -47,5 +47,9 @@
     <dimen name="three">3dp</dimen>
     <dimen name="twoentyfive">25dp</dimen>
     <dimen name="paymentbtnsize">50dp</dimen>
+    <dimen name="drawericon">24dp</dimen>
+    <dimen name="drawerpaddingstart">15dp</dimen>
+    <dimen name="drawerview">60dp</dimen>
+    <dimen name="eight">8dp</dimen>
 
 </resources>

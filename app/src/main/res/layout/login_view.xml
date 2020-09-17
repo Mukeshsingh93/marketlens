@@ -4,116 +4,87 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <import type="android.view.View"/>
-        <!--<variable
+        <variable
             name="viewModel"
-            type="com.example.myapplication.loginView.LoginViewModel" />-->
+            type="com.rs.marketlens.viewModel.LoginViewModel" />
     </data>
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="@dimen/thirty"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="@dimen/twoenty">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
 
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/log_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/logo_bg"
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="190dp"
+                android:layout_height="180dp"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="@dimen/sixty"
+                android:src="@drawable/logo_large"
                 />
 
+
+
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/mobileno_edittxt"
+                android:id="@+id/mobileno"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                app:layout_constraintTop_toBottomOf="@+id/log_img"
+                app:layout_constraintTop_toBottomOf="@+id/imageview"
                 android:hint="@string/entermobileno"
                 android:inputType="phone"
-                android:maxLength="15"
+                android:layout_marginTop="@dimen/thirty"
+                android:maxLength="10"
                 android:padding="@dimen/ten"
                 android:textSize="@dimen/textsize_fourteen"
-                android:layout_marginTop="@dimen/sixty"
-                android:fontFamily="@font/regular"
-                android:textColor="@color/blacktext"
-                android:background="@drawable/square_box"
-                />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/password_edittxt"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:layout_constraintTop_toBottomOf="@+id/mobileno_edittxt"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:layout_marginTop="@dimen/twoenty"
-                android:maxLength="40"
-                android:padding="@dimen/ten"
-                android:textSize="@dimen/textsize_fourteen"
+                android:text="@{viewModel.phnNo}"
+                android:onTextChanged="@{viewModel.onTextChangedPhone}"
                 android:fontFamily="@font/regular"
                 android:background="@drawable/square_box"
                 android:textColor="@color/blacktext"
                 />
 
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/forgetpassword"
-                style="@style/Widget.Normal.AppTextView"
-               app:layout_constraintTop_toBottomOf="@+id/password_edittxt"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/forgetpassword"
-                android:textSize="@dimen/textsize_twl"
-                android:layout_marginTop="@dimen/ten"
-                />
-
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/accepttermcondition"
+                android:layout_width="wrap_content"
+                app:layout_constraintHorizontal_weight="1"
+                android:text="@string/iagreetermcondition"
+                style="@style/radio"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="@dimen/five"
+                app:layout_constraintTop_toBottomOf="@+id/mobileno"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <RelativeLayout
-                android:id="@+id/loginbtn"
+                android:id="@+id/signupbtn"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="@dimen/twoenty"
                 android:background="@drawable/loginbtn_bg"
-                app:layout_constraintTop_toBottomOf="@+id/forgetpassword"
-                >
+                android:onClick="@{() -> viewModel.signIn()}"
+                app:layout_constraintTop_toBottomOf="@+id/accepttermcondition">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/Widget.Normal.AppTextView"
                     android:layout_centerInParent="true"
                     android:text="@string/login"
                     android:textAllCaps="true"
+                    android:textStyle="bold"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/textsize_sixteen" />
-
             </RelativeLayout>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/donthaveaccount"
-                style="@style/Widget.Normal.AppTextView"
-                app:layout_constraintTop_toBottomOf="@+id/loginbtn"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/donthaveaccount"
-                android:layout_marginTop="@dimen/twoenty"
-                />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/signup"
-                style="@style/Widget.Normal.AppTextView"
-                app:layout_constraintTop_toBottomOf="@+id/donthaveaccount"
-                android:text="@string/signup"
-                android:textSize="@dimen/textsize_twoentytwo"
-                android:textColor="@color/pink"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+

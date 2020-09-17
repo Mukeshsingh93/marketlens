@@ -23,26 +23,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             >
 
-            <ImageView
-                android:id="@+id/imageview"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:src="@drawable/logo_bg"
-                />
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/verificationcode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/verificationcode"
-                app:layout_constraintTop_toBottomOf="@+id/imageview"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textColor="@color/blacktext"
-                android:textSize="@dimen/textsize_twoentyeight"
+                android:textSize="@dimen/textsize_twoentysix"
+                android:textStyle="bold"
                 android:layout_marginTop="@dimen/twoenty"
                 app:fontFamily="@font/regular"
                 />
@@ -59,19 +52,21 @@
                 android:id="@+id/otpsent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/otp"
+                android:text="@string/verificationcodedes"
                 app:fontFamily="@font/regular"
                 android:textStyle="bold"
+                android:textColor="@color/darkgrey"
+                android:layout_margin="@dimen/five"
                 android:textSize="@dimen/textsize_fourteen"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="@dimen/twoenty"
-                app:layout_constraintEnd_toStartOf="@+id/senttomsg"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/five"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/verificationcode"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 />
 
-            <androidx.appcompat.widget.AppCompatTextView
+         <!--   <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/senttomsg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,7 +78,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/verificationcode"
                 app:layout_constraintStart_toEndOf="@+id/otpsent"
                 app:layout_constraintEnd_toEndOf="parent"
-                />
+                />-->
 
             <LinearLayout
                 android:id="@+id/otplayout"
@@ -92,17 +87,19 @@
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/otpsent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="@dimen/twoenty"
+                android:layout_marginTop="@dimen/fourty"
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edittextone"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
+                    android:background="@color/gray"
                     android:maxLength="1"
                     android:inputType="number"
                     android:text=""
-                    android:textColorHint="@android:color/white"
+                    android:gravity="center"
+                    android:textColorHint="@color/blacktext"
                     android:textSize="@dimen/textsize_otp"
                     android:textColor="@color/blacktext"
                     android:fontFamily="@font/regular"
@@ -110,84 +107,62 @@
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edittexttwo"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:maxLength="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:textColorHint="@color/blacktext"
+
                     android:inputType="number"
                     android:text=""
-                    android:textColorHint="@android:color/white"
                     android:textSize="@dimen/textsize_otp"
                     android:textColor="@color/blacktext"
                     android:fontFamily="@font/regular"
-                    android:layout_marginStart="@dimen/twoenty"
+                    android:layout_marginStart="@dimen/ten"
                     />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edittextthree"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:maxLength="1"
                     android:inputType="number"
                     android:text=""
-                    android:layout_marginStart="@dimen/twoenty"
-                    android:textColorHint="@android:color/white"
+                    android:layout_marginStart="@dimen/ten"
                     android:textSize="@dimen/textsize_otp"
                     android:textColor="@color/blacktext"
-                    android:fontFamily="@font/regular"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:textColorHint="@color/blacktext"                    android:fontFamily="@font/regular"
                     />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edittextfour"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:maxLength="1"
                     android:inputType="number"
                     android:text=""
-                    android:layout_marginStart="@dimen/twoenty"
+                    android:layout_marginStart="@dimen/ten"
                     android:textColorHint="@android:color/white"
                     android:textSize="@dimen/textsize_otp"
                     android:textColor="@color/blacktext"
+                    android:background="@color/gray"
+                    android:gravity="center"
                     android:fontFamily="@font/regular"
                     />
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edittextfive"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:maxLength="1"
-                    android:inputType="number"
-                    android:text=""
-                    android:gravity="bottom"
-                    android:layout_marginStart="@dimen/twoenty"
-                    android:textSize="@dimen/textsize_otp"
-                    android:textColorHint="@android:color/white"
-                    android:textColor="@color/blacktext"
-                    android:fontFamily="@font/regular"
-                    />
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edittextsix"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:maxLength="1"
-                    android:inputType="number"
-                    android:text=""
-                    android:gravity="bottom"
-                    android:layout_marginStart="@dimen/twoenty"
-                    android:textSize="@dimen/textsize_otp"
-                    android:textColorHint="@android:color/white"
-                    android:textColor="@color/blacktext"
-                    android:fontFamily="@font/regular"
-                    />
 
             </LinearLayout>
 
 
             <RelativeLayout
-                android:id="@+id/loginbtn"
+                android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="@dimen/twoenty"
+                android:layout_marginTop="@dimen/fourty"
                 android:background="@drawable/loginbtn_bg"
                 app:layout_constraintTop_toBottomOf="@+id/otplayout"
                 >
@@ -195,14 +170,29 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/Widget.Normal.AppTextView"
                     android:layout_centerInParent="true"
-                    android:text="@string/signup"
+                    android:text="@string/verifynow"
                     android:textAllCaps="true"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/textsize_sixteen" />
-
             </RelativeLayout>
 
-
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/resubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resendotp"
+                app:fontFamily="@font/regular"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/five"
+                android:textSize="@dimen/textsize_sixteen"
+                android:gravity="center"
+                android:padding="@dimen/fifteen"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

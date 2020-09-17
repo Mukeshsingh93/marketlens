@@ -1,5 +1,6 @@
 package com.rs.marketlens.activity
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -14,5 +15,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login_activity)
 
 
+    }
+    fun startHomeActivity()
+    {
+        val intent = Intent(this@LoginActivity,HomeActivity::class.java);
+        startActivity(intent);
+        finish()
     }
 }

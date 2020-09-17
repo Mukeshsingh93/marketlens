@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.rs.marketlens.network.FeaturedVideos" />
+
+        <variable name="index" type="int" />
+
+        <variable
+            name="clickListener"
+            type="com.rs.marketlens.adapter.OnFeaturedClick" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/ten">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/male_radiobtn"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="fitXY"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/latestvideostxt"
+                style="@style/Widget.Normal.AppTextView"
+                android:layout_centerInParent="true"
+                android:text="@{viewModel.video_title.toString()}"
+                android:layout_marginStart="@dimen/fifteen"
+                app:layout_constraintTop_toBottomOf="@+id/topservicerecyclerview"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/blacktext"
+                android:textStyle="bold"
+                android:maxLines="3"
+                android:layout_marginTop="@dimen/five"
+                android:textSize="@dimen/textsize_twl"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/latestvideosdestxt"
+                style="@style/Widget.Normal.AppTextView"
+                android:layout_centerInParent="true"
+                android:text="@{viewModel.short_desc.toString()}"
+                app:layout_constraintTop_toBottomOf="@+id/latestvideostxt"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/blacktext"
+                android:layout_marginTop="@dimen/ten"
+                android:maxLines="3"
+                android:layout_marginStart="@dimen/fifteen"
+                android:textSize="@dimen/textsize_ten" />
+
+            <RelativeLayout
+                android:id="@+id/signupbtn"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/twoenty"
+                android:layout_marginEnd="@dimen/twoenty"
+                android:layout_marginTop="@dimen/twoenty"
+                android:background="@drawable/loginbtn_bg"
+                app:layout_constraintTop_toBottomOf="@+id/accepttermcondition">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Normal.AppTextView"
+                    android:layout_centerInParent="true"
+                    android:text="@string/viewmore"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_fourteen" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</layout>

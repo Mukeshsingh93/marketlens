@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_view"
+    app:startDestination="@id/homeView2">
+
+
+    <fragment
+        android:id="@+id/homeView2"
+        android:name="com.rs.marketlens.views.HomeView"
+        android:label="HomeView" >
+        <action
+            android:id="@+id/action_homeView2_to_onlineCourses"
+            app:destination="@id/onlineCourses" />
+        <action
+            android:id="@+id/action_homeView2_to_weeklyStratgyView"
+            app:destination="@id/weeklyStratgyView" />
+        <action
+            android:id="@+id/action_homeView2_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_homeView2_to_marketLensCalculater"
+            app:destination="@id/marketLensCalculater" />
+        <action
+            android:id="@+id/action_homeView2_to_playerActivity"
+            app:destination="@id/playerActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlineCourses"
+        android:name="com.rs.marketlens.views.OnlineCourses"
+        android:label="OnlineCourses" >
+
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_onlineCourses_to_viewAllCourses"
+            app:destination="@id/viewAllCourses" />
+        <action
+            android:id="@+id/action_onlineCourses_to_paymentGatWay"
+            app:destination="@id/paymentGatWay" />
+        <action
+            android:id="@+id/action_onlineCourses_to_finalPaymentGateways2"
+            app:destination="@id/finalPaymentGateways2" />
+        <action
+            android:id="@+id/action_onlineCourses_to_viewMore"
+            app:destination="@id/viewMore" />
+        <action
+            android:id="@+id/action_onlineCourses_to_playerActivity"
+            app:destination="@id/playerActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAllCourses"
+        android:name="com.rs.marketlens.views.ViewAllCourses"
+        android:label="ViewAllCourses">
+
+        <argument
+            android:name="data"
+            app:nullable="true"
+            app:argType="com.rs.marketlens.network.OurServiceVideos[]" />
+        <action
+            android:id="@+id/action_viewAllCourses_to_playerActivity"
+            app:destination="@id/playerActivity" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/paymentGatWay"
+        android:name="com.rs.marketlens.views.PaymentGatWay"
+        android:label="PaymentGatWay" />
+    <fragment
+        android:id="@+id/detailView"
+        android:name="com.rs.marketlens.views.DetailView"
+        android:label="DetailView" />
+   <!-- <fragment
+        android:id="@+id/videoView"
+        android:name="com.rs.marketlens.views.VideoView"
+        android:label="VideoView">
+
+       <argument
+            android:name="url"
+            app:argType="string" />
+
+    </fragment>-->
+    <activity
+        android:id="@+id/finalPaymentGateways2"
+        android:name="com.rs.marketlens.views.FinalPaymentGateways"
+        android:label="FinalPaymentGateways" />
+
+    <fragment
+        android:id="@+id/viewMore"
+        android:name="com.rs.marketlens.views.ViewMore"
+        android:label="ViewMore">
+       <argument
+            android:name="detail"
+            app:argType="com.rs.marketlens.network.PackageDetails"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/weeklyStratgyView"
+        android:name="com.rs.marketlens.views.WeeklyStratgyView"
+        android:label="WeeklyStratgyView" >
+        <action
+            android:id="@+id/action_weeklyStratgyView_to_finalPaymentGateways2"
+            app:destination="@id/finalPaymentGateways2" />
+        <action
+            android:id="@+id/action_weeklyStratgyView_to_viewAllCourses"
+            app:destination="@id/viewAllCourses" />
+        <action
+            android:id="@+id/action_weeklyStratgyView_to_playerActivity"
+            app:destination="@id/playerActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.rs.marketlens.views.WebViewFragment"
+        android:label="WebViewFragment">
+
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/marketLensCalculater"
+        android:name="com.rs.marketlens.views.MarketLensCalculater"
+        android:label="MarketLensCalculater" />
+    <fragment
+        android:id="@+id/sliderCourses"
+        android:name="com.rs.marketlens.views.SliderCourses"
+        android:label="SliderCourses">
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+    <activity
+        android:id="@+id/videoView2"
+        android:name="com.rs.marketlens.views.VideoView"
+        android:label="VideoView">
+
+        <argument
+            android:name="url"
+            app:argType="string" />
+
+    </activity>
+    <activity
+        android:id="@+id/playerActivity"
+        android:name="com.rs.marketlens.views.PlayerActivity"
+        android:label="PlayerActivity">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </activity>
+
+</navigation>

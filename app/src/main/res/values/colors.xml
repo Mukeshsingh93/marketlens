@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimaryDark">#d411ab</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="gray">#f0f0f0</color>
     <color name="pink">#d411ab</color>
+    <color name="lightpink">#F8BBD0</color>
     <color name="blacktext">#222222</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="darkgrey">#7c7c7c</color>
+    <color name="activity_bg">#EEEEEE</color>
+    <color name="borderstroke">#C8C8C8</color>
+    <color name="imagetrans">#6F000000</color>
+    <color name="blue">#6F000000</color>
+
 </resources>

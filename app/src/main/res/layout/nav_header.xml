@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileinfo"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="@dimen/ten"
+        android:paddingStart="@dimen/ten"
+        android:paddingEnd="@dimen/textsize_ten"
+        android:background="@color/pink">
+
+<!--
+        android:background="@drawable/white_circle"
+-->
+
+
+        <ImageView
+            android:id="@+id/profileimg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/white_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/profileimg"
+            app:layout_constraintTop_toTopOf="@+id/profileimg"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/ten"
+            app:layout_constraintBottom_toBottomOf="@+id/profileimg"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nametext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parshant Kumar"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/textsize_twl"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/userphoneno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91 8555545454"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="@dimen/five"
+                android:textSize="@dimen/textsize_ten"
+                android:textColor="@android:color/white"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/profileinfo"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:visibility="gone"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/home"
+                android:drawableStart="@drawable/home_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/onlinecourse"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/myonlinecourse"
+                android:drawableStart="@drawable/onlinecourse_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/weeklycourse"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/myweeklycourse"
+                android:drawableStart="@drawable/calendar_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/editprofile"
+                android:drawableStart="@drawable/edit_profile_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/notification"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/mynotification"
+                android:drawableStart="@drawable/notification_pink_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/aboutus"
+                android:drawableStart="@drawable/about_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/needhelp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/needhelp"
+                android:drawableStart="@drawable/need_help_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/privacypolicy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/privacypolicy"
+                android:drawableStart="@drawable/privacy_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/termcondition"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/termsconditions"
+                android:drawableStart="@drawable/termcondition_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/shareus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/shareus"
+                android:drawableStart="@drawable/share_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawerview"
+            android:paddingStart="@dimen/drawerpaddingstart"
+            android:paddingEnd="@dimen/drawerpaddingstart"
+            android:background="@drawable/draweritem_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Menu.AppTextView"
+                android:text="@string/logout"
+                android:drawableStart="@drawable/logout_icon"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right_icon"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
